@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <nav>
+            <h1 id="main-title">JavaScript DOM Manipulation Demo</h1>
+            <p>Interactive web page demonstrating dynamic content changes</p>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main class="container">
+        <!-- Section 1: Text Content Manipulation -->
+        <section class="demo-section">
+            <h2>Dynamic Text Content</h2>
+            <p id="dynamic-text">This text will change when you click the button below!</p>
+            <button id="change-text-btn" class="btn primary">Change Text Content</button>
+            <button id="reset-text-btn" class="btn secondary">Reset Text</button>
+        </section>
+
+        <!-- Section 2: CSS Style Manipulation -->
+        <section class="demo-section">
+            <h2>Dynamic Style Changes</h2>
+            <div id="style-box" class="style-demo-box">
+                <p>This box will change styles dynamically!</p>
+                <p>Click the buttons below to see the magic happen.</p>
+            </div>
+            <div class="button-group">
+                <button id="change-color-btn" class="btn primary">Change Colors</button>
+                <button id="change-size-btn" class="btn secondary">Toggle Size</button>
+                <button id="change-border-btn" class="btn accent">Change Border</button>
+                <button id="reset-styles-btn" class="btn danger">Reset Styles</button>
+            </div>
+        </section>
+
+        <!-- Section 3: Element Addition/Removal -->
+        <section class="demo-section">
+            <h2>Dynamic Element Management</h2>
+            <p>Add or remove elements from the list below:</p>
+            
+            <div class="input-group">
+                <input type="text" id="new-item-input" placeholder="Enter new item text..." maxlength="50">
+                <button id="add-element-btn" class="btn success">Add Element</button>
+            </div>
+            
+            <ul id="dynamic-list" class="dynamic-list">
+                <li>Initial List Item 1 <button class="remove-btn" onclick="removeListItem(this)">×</button></li>
+                <li>Initial List Item 2 <button class="remove-btn" onclick="removeListItem(this)">×</button></li>
+                <li>Initial List Item 3 <button class="remove-btn" onclick="removeListItem(this)">×</button></li>
+            </ul>
+            
+            <div class="button-group">
+                <button id="clear-all-btn" class="btn danger">Clear All Items</button>
+                <button id="count-items-btn" class="btn info">Count Items</button>
+            </div>
+            <p id="item-counter" class="counter-display"></p>
+        </section>
+
+        <!-- Section 4: Interactive Features -->
+        <section class="demo-section">
+            <h2>Interactive Features</h2>
+            <article class="feature-card" id="interactive-card">
+                <h3>Hover and Click Me!</h3>
+                <p id="interaction-status">Status: Ready for interaction</p>
+                <button id="toggle-visibility-btn" class="btn primary">Toggle Card Visibility</button>
+            </article>
+        </section>
+
+        <!-- Section 5: Form Interaction -->
+        <section class="demo-section">
+            <h2>Form Interaction Demo</h2>
+            <form id="demo-form" class="demo-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn success">Submit Form</button>
+                <button type="button" id="clear-form-btn" class="btn secondary">Clear Form</button>
+            </form>
+            <div id="form-output" class="form-output"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JavaScript DOM Manipulation Assignment</p>
+        <p>Demonstrating dynamic web interactions</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
